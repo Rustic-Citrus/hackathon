@@ -8,6 +8,26 @@ body {
   background: linear-gradient(-45deg, #d4e09b, #f6f4d2, #cbdfbd, #f19c79);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  display: block;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  margin-right: 2rem;
+}
+
+table {
+  border: black solid 1px;
 }
 
 @keyframes gradient {
