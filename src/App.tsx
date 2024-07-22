@@ -4,7 +4,7 @@ import Matrix from "./pages/Matrix.tsx";
 import Profile from "./pages/Profile.tsx";
 import { Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Catalogue />} />

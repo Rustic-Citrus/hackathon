@@ -1,7 +1,7 @@
 import Details from "./Details.tsx";
 import { useParams } from "react-router-dom";
 
-export const Profile = () => {
+const Profile = () => {
     const { id } = useParams();
 
     return (
