@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { Table } from "../components/Table";
+import { Navbar } from "../components/Navbar";
 
-function Catalogue() {
+const Catalogue = () => {
   return (
-    <main>
+    <>
+      <Navbar />
+      <main>
       <div className="left">
         <motion.div
           className="sidebar"
@@ -27,6 +30,8 @@ function Catalogue() {
         </div>
       </div>
     </main>
+    </>
+    
   );
 }
 

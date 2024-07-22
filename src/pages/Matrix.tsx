@@ -1,4 +1,5 @@
 import Chart from 'chart.js/auto';
+import { Navbar } from '../components/Navbar';
 import { useEffect } from 'react';
 import 'chartjs-plugin-annotation'; // Import the plugin
 
@@ -27,9 +28,10 @@ const Matrix = () => {
   }, []);
 
   return (
-    <div>
+    <>
+      <Navbar />
       <canvas id="myChart"></canvas>
-    </div>
+    </>
   );
 }
 

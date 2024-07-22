@@ -1,4 +1,5 @@
 import data from "../../data/processed.json";
+import { Navbar } from "../components/Navbar.tsx";
 import "../css/Details.css";
 import { useState, useEffect } from "react";
 
@@ -40,6 +41,8 @@ const [LLMData, setLLMData] = useState<LLMDataType | undefined>();
   }, []);
 
   return (
+    <>
+    <Navbar />
     <main>
       <h1>
         {LLMData && LLMData.name}
@@ -83,6 +86,7 @@ const [LLMData, setLLMData] = useState<LLMDataType | undefined>();
         </div>
       )}
     </main>
+    </>
   );
 }
 
