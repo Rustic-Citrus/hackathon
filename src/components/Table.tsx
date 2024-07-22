@@ -1,19 +1,8 @@
 import data from "../../data/processed.json";
 import "../css/Table.css";
-// import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Table = () => {
-  //   const [descriptionToShow, setDescriptionToShow] = useState(""
-
-  //   const handleClick = (i: number) => {
-  //     let textToDisplay : string | null;
-  //     for (let index : number = 0; index < data.length; index++) {
-  //       if (index === i) {
-  //         textToDisplay = data[i].description;
-  //       }
-  //     }
-  // tToDisplay);  };
-
   return (
     <table>
       <thead>
@@ -26,6 +15,7 @@ export const Table = () => {
           <td>Access</td>
           <td>License</td>
           <td>Size</td>
+          <td>More Info</td>
         </tr>
       </thead>
       <tbody>
@@ -46,6 +36,7 @@ export const Table = () => {
                 <td>{row.access}</td>
                 <td>{row.license}</td>
                 <td>{row.size}</td>
+                <td><Link to={`/LLM/${row.table_pk}`}><button>Click Here</button></Link></td>
               </tr>
             );
           }
