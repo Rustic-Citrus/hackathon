@@ -1,0 +1,11 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+h2 {
+    grid-column: span 4;
+}
