@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 
 export const Table = () => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>Organization</td>
-          <td>Description</td>
-          <td>Date Created</td>
-          <td>URL</td>
-          <td>Access</td>
-          <td>License</td>
-          <td>Size</td>
-          <td>More Info</td>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row, i) => {
-          if (i < 5) {
+    <div className="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Organization</th>
+            <th>Description</th>
+            <th>Date Created</th>
+            <th>URL</th>
+            <th>Access</th>
+            <th>License</th>
+            <th>Size</th>
+            <th>More Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row, i) => {
             return (
               <tr key={i}>
                 <td>{row.name}</td>
@@ -36,12 +36,16 @@ export const Table = () => {
                 <td>{row.access}</td>
                 <td>{row.license}</td>
                 <td>{row.size}</td>
-                <td><Link to={`/LLM/${row.table_pk}`}><button>Click Here</button></Link></td>
+                <td>
+                  <Link to={`/LLM/${row.table_pk}`}>
+                    <button>Details</button>
+                  </Link>
+                </td>
               </tr>
             );
-          }
-        })}
-      </tbody>
-    </table>
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 };

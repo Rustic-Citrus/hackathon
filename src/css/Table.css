@@ -1,7 +1,27 @@
-thead {
-    font-weight: bold;
+.table-container {
+  max-height: 50vh; /* Adjust based on your needs */
+  overflow-y: auto;
+  overflow-x: visible;
 }
 
-td {
-    padding: 0.8rem 0rem;
+table {
+  border: none;
+  margin: 0 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  font-weight: bold;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFFDD; /* Ensure the header is visible over the body content */
+}
+
+th, td {
+  text-align: left;
+  padding: 0.8rem 0.5rem;
 }
