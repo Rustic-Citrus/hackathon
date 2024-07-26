@@ -6,7 +6,7 @@ const Profile = () => {
 
     return (
         <>
-            <Details id={parseInt(id ?? "")} />
+            <Details LLMid={parseInt(id ?? "")} />
         </>
     );
 };

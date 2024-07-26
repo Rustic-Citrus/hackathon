@@ -1,37 +1,22 @@
-import { motion } from "framer-motion";
+import styled from 'styled-components';
 import { Table } from "../components/Table";
 import { Navbar } from "../components/Navbar";
+
+const Header = styled.h1`
+  margin-left: 1rem;
+`;
 
 const Catalogue = () => {
   return (
     <>
       <Navbar />
       <main>
-      <div className="left">
-        <motion.div
-          className="sidebar"
-          whileHover={{ scale: 1.05, boxShadow: "0.5rem 0.5rem black" }}
-        >
-          <input
-            placeholder="Search"
-            type="text"
-            name="search"
-            id="name"
-            aria-label="search-input"
-            className="search-input"
-          ></input>
-        </motion.div>
-      </div>
-
-      <div className="right">
         <div>
-          <h1>LLM's</h1>
+          <Header>LLM's</Header>
           <Table />
         </div>
-      </div>
-    </main>
+      </main>
     </>
-    
   );
 }
 

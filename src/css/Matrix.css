@@ -1,0 +1,60 @@
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 65%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+#myChart {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.matrix-table-container {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+table.criteriaTable {
+    border: 2px solid #65B697;
+    background-color: #EFECAE;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table.criteriaTable td,
+table.criteriaTable th {
+    padding: 3px 2px;
+}
+
+table.criteriaTable tbody td {
+    font-size: 13px;
+}
+
+table.criteriaTable tr:nth-child(even) {
+    background: #C9D880;
+}
+
+table.criteriaTable thead {
+    background: #65B697;
+}
+
+table.criteriaTable thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+table.criteriaTable tfoot td {
+    font-size: 13px;
+}
+
+.highlight {
+    background-color: #b66565;
+}

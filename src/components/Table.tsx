@@ -3,9 +3,21 @@ import "../css/Table.css";
 import { Link } from "react-router-dom";
 
 export const Table = () => {
+
+    const formatDate = (date: number | null) => { 
+    if (date === null) {
+      return "N/A";
+    }
+    const d = new Date(date);
+    const day = d.getDate().toString().padStart(2, '0');
+    const month = (d.getMonth() + 1).toString().padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
   return (
     <div className="table-container">
-      <table>
+      <table className="LLMTable">
         <thead>
           <tr>
             <th>Name</th>
@@ -24,20 +36,17 @@ export const Table = () => {
             return (
               <tr key={i}>
                 <td>{row.name}</td>
-                <td>{row.organization?.substring(0, 20)}...</td>
+                <td>{row.organization}</td>
                 <td>
-                  {/* <button type="button" onClick={(i) => handleClick(i)}>
-                    Show Description
-                  </button> */}
-                  {row.description?.substring(0, 20)}...
+                  {row.description}
                 </td>
-                <td>{row.created_date}</td>
-                <td>{row.url?.substring(0, 20)}...</td>
+                <td>{formatDate(row.created_date)}</td>
+                <td title={row.url}>{row.url?.substring(0, 20)}...</td>
                 <td>{row.access}</td>
                 <td>{row.license}</td>
                 <td>{row.size}</td>
                 <td>
-                  <Link to={`/LLM/${row.table_pk}`}>
+                  <Link to={`/LLM/${row.id}`}>
                     <button>Details</button>
                   </Link>
                 </td>

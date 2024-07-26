@@ -1,27 +1,59 @@
 .table-container {
-  max-height: 50vh; /* Adjust based on your needs */
+  max-height: 75vh;
   overflow-y: auto;
   overflow-x: visible;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-table {
-  border: none;
-  margin: 0 1rem;
+table.LLMTable {
+  border: 2px solid #65B697;
+  background-color: #EFECAE;
   width: 100%;
+  text-align: center;
   border-collapse: collapse;
 }
 
-thead {
+table.LLMTable td,
+table.LLMTable th {
+  padding: 3px 2px;
+}
+
+table.LLMTable tbody td {
+  font-size: 13px;
+}
+
+table.LLMTable tr:nth-child(even) {
+  background: #C9D880;
+}
+
+table.LLMTable thead {
+  background: #65B697;
+}
+
+table.LLMTable thead th {
+  font-size: 19px;
   font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
 }
 
-th {
-  position: sticky;
-  top: 0;
-  background-color: #FFFFFFDD; /* Ensure the header is visible over the body content */
+table.LLMTable thead th:first-child {
+  border-left: none;
 }
 
-th, td {
-  text-align: left;
-  padding: 0.8rem 0.5rem;
+table.LLMTable tfoot td {
+  font-size: 13px;
+}
+
+table.LLMTable tfoot .links {
+  text-align: right;
+}
+
+table.LLMTable tfoot .links a {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #A40808;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
